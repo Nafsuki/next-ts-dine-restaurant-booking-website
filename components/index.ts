@@ -1,0 +1,13 @@
+export { default as Header } from './Header';
+export { default as Footer } from './Footer';
+export { default as Layout } from './Layout';
+export { default as Top } from './Top';
+export { default as Middle } from './Middle';
+export { default as MealOneMobile } from './MiddleParts/MealOneMobile';
+export { default as MealOneTablet } from './MiddleParts/MealOneTablet';
+export { default as PatternCurveTopRight } from './MiddleParts/PatternCurveTopRight';
+export { default as PatternDevide } from './MiddleParts/PatternDevide';
+export { default as MealTwoMobile } from './MiddleParts/MealTwoMobile';
+export { default as Info } from './MiddleParts/Info';
+export { default as MealTwoTablet } from './MiddleParts/MealTwoTablet';
+export { default as PatternLines } from './MiddleParts/PatternLines';
