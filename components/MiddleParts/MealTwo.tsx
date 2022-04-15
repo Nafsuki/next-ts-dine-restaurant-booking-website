@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import { PatternDevide, Info, PatternLines } from '../';
+import { PatternDevide, Info, PatternLines } from '..';
 import { info } from '../../data';
 
-const MealTwoMobile = () => {
+const MealTwo = () => {
 	return (
 		<>
 			{/* Mobile image  */}
@@ -59,4 +59,4 @@ const MealTwoMobile = () => {
 	);
 };
 
-export default MealTwoMobile;
+export default MealTwo;
