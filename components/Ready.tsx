@@ -3,7 +3,8 @@ import Link from 'next/link';
 const Ready = () => {
 	return (
 		<div className='relative'>
-			<div className='-z-10'>
+			{/* mobile background image  */}
+			<div className='-z-10 md:hidden'>
 				<Image
 					src='/images/homepage/ready-bg-mobile@2x.jpg'
 					alt='ready background image'
@@ -12,8 +13,31 @@ const Ready = () => {
 					layout='responsive'
 				/>
 			</div>
-			<div className='z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute text-white'>
-				<h2 className='my-5 font-bold leading-10 tracking-[-0.4px] text-center text-[32px] w-[327px]'>
+
+			{/* tablet background image  */}
+			<div className='-z-10 hidden md:block xl:hidden'>
+				<Image
+					src='/images/homepage/ready-bg-tablet@2x.jpg'
+					alt='ready background tablet'
+					width={768}
+					height={272}
+					layout='responsive'
+				/>
+			</div>
+
+			{/* desktop background image  */}
+			<div className='-z-10 hidden xl:block'>
+				<Image
+					src='/images/homepage/ready-bg-desktop@2x.jpg'
+					alt='ready background desktop'
+					width={1440}
+					height={240}
+					layout='responsive'
+				/>
+			</div>
+
+			<div className='w-screen bg-transparent xl:h-[240px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute text-white flex flex-col justify-center items-center xl:flex-row xl:justify-between xl:px-[165px]'>
+				<h2 className='my-5 font-semibold leading-10 tracking-[-0.4px] text-center text-[32px] sm:text-5xl md:w-screen w-[327px] xl:w-auto'>
 					Ready to make a reservation?
 				</h2>
 				<div className='text-center'>

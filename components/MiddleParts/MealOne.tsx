@@ -6,7 +6,9 @@ const MealOne = () => {
 	return (
 		<>
 			{/* mobile image */}
-			<PatternCurveTopRight />
+			<div className='hidden md:block md:absolute md:top-[180px] md:-left-[600px] w-[895px] h-[320px] xl:left-0 xl:top-[300px]'>
+				<PatternCurveTopRight />
+			</div>
 			<div className='shadow-3xl -mt-20 md:hidden'>
 				<Image
 					src='/images/homepage/enjoyable-place-mobile@2x.jpg'
