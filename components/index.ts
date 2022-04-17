@@ -13,3 +13,4 @@ export { default as Menu } from './Menu';
 export { default as FamilyGathering } from './FamilyGathering';
 export { default as MenuCard } from './Menu/MenuCard';
 export { default as Ready } from './Ready';
+export { default as BookingForm } from './BookingForm';
