@@ -14,3 +14,5 @@ export { default as FamilyGathering } from './FamilyGathering';
 export { default as MenuCard } from './Menu/MenuCard';
 export { default as Ready } from './Ready';
 export { default as BookingForm } from './BookingForm';
+export { default as Tabs } from './FamilyGathering/Tabs';
+export { default as BookATableButton } from './FamilyGathering/BookATableButton';

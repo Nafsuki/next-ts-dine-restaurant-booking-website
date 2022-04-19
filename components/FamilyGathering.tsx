@@ -1,6 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import { PatternLines, PatternCurveTopRight } from './';
+import { PatternLines, PatternCurveTopRight, Tabs } from './';
 
 const FamilyGathering = () => {
 	return (
@@ -46,28 +45,8 @@ const FamilyGathering = () => {
 				/>
 			</div>
 
-			<div className='flex flex-col-reverse'>
-				<div className='cursor-pointer uppercase text-[#4C4C4C] flex flex-col justify-center items-center mt-10 mb-5 md:mb-14 leading-[28px] tracking-[2px] md:flex-row md:space-x-14 xl:space-x-0 text-lg md:text-xl xl:flex-col xl:items-start xl:space-y-3'>
-					<span className=''>Family Gathering</span>
-					{/* <span className='w-[30px] bg-black h-[1px]'></span> */}
-					<span className=''>Special Events</span>
-					<span className=''>Social Events</span>
-				</div>
-				<div className='text-[#242B37] flex flex-col justify-center items-center text-center xl:items-start'>
-					<h2 className='font-semibold text-4xl tracking-[-0.4px] md:text-5xl'>
-						Family Gathering
-					</h2>
-					<p className='my-3 md:my-5 px-10 md:p-0 text-[15px] md:text-2xl font-normal leading-[25px] tracking-[-0.19px] w-[327px] md:w-[457px] xl:text-left'>
-						We love catering for entire families. So please bring everyone along
-						for a special meal with your loved ones. We’ll provide a memorable
-						experience for all.
-					</p>
-					<Link href='/booking' passHref>
-						<button className='my-5 uppercase text-white bg-[#111111] hover:bg-white hover:border-[#111111] hover:text-[#17192B] transition-colors ease-in-out border px-[54px] py-6 text-[14px] font-semibold leading-4 tracking-[2px]'>
-							Book a table
-						</button>
-					</Link>
-				</div>
+			<div className='flex flex-col border xl:flex-col-reverse'>
+				<Tabs />
 			</div>
 		</div>
 	);
