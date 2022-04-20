@@ -1,40 +1,67 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, SubmitHandler } from 'react-hook-form';
+
+interface IFormInputs {
+	name: String;
+	email: String;
+}
+
+const onSubmit: SubmitHandler<IFormInputs> = (data: any) => console.log(data);
 
 const BookingForm = () => {
 	const {
 		register,
-		handleSubmit,
-		watch,
 		formState: { errors },
-	} = useForm();
-	const onSubmit = (data: any) => console.log(data);
+		handleSubmit,
+		// watch,
+	} = useForm<IFormInputs>();
 
 	return (
-		<div className='z-10 flex items-center justify-center mx-6 mb-24 -mt-24'>
-			<div className='h-[585px] shadow-3xl bg-white text-[#8E8E8E] w-[327px] flex flex-col justify-center items-center'>
+		<div className='z-10 flex items-center justify-center mb-24 -mt-24'>
+			<div className=' shadow-3xl bg-white text-[#8E8E8E] bg-green-300 md:w-[540px] flex flex-col justify-center items-center'>
 				<form
 					onSubmit={handleSubmit(onSubmit)}
-					className='flex flex-col items-center justify-center'
+					className='flex flex-col my-5 space-y-5 bg-gray-600'
 				>
 					<input
 						type='text'
-						{...(register('name'), { required: true })}
+						{...register('name', { required: true })}
 						placeholder='Name'
-						className='w-full py-5 border-b'
+						className='py-3 border-b caret-[#9E7F66] mx-6'
 					/>
-					{errors.name?.type === 'required' && (
-						<span>This field is required</span>
-					)}
+					<span className='text-xs text-[#B54949]'>
+						{errors.name && 'This field is required'}
+					</span>
 					<input
 						type='email'
-						{...(register('email'), { required: true })}
+						{...register('email', { required: true })}
 						placeholder='Email'
-						className='w-full py-5 border-b'
+						className='py-3 mx-6 border-b'
 					/>
-					{errors.email?.type === 'required' && (
-						<span>This field is required</span>
-					)}
+					<span className='text-xs text-[#B54949]'>
+						{errors.name && 'This field is required'}
+					</span>
+
+					<div className='flex flex-col justify-center items-start w-[327px] border px-6'>
+						<span className='h-[45px] leading-[45px]'>Pick a date</span>
+						<div className='flex justify-between w-full bg-pink-400'>
+							<input
+								type='text'
+								placeholder='MM'
+								className='w-[73px] h-[45px] border-b text-center'
+							/>
+							<input
+								type='text'
+								placeholder='DD'
+								className='w-[73px] h-[45px] border-b text-center'
+							/>
+							<input
+								type='text'
+								placeholder='YYYY'
+								className='w-[73px] h-[45px] border-b text-center'
+							/>
+						</div>
+					</div>
 					<button className='my-8 text-center uppercase bg-[#111111] text-white hover:bg-white hover:text-[#17192B] transition-colors ease-in-out border px-[54px] py-6 text-[14px] font-semibold leading-4 tracking-[2px]'>
 						make reservation
 					</button>
