@@ -45,7 +45,7 @@ const FamilyGathering = () => {
 				/>
 			</div>
 
-			<div className='flex flex-col border xl:flex-col-reverse'>
+			<div className='flex flex-col xl:flex-col-reverse'>
 				<Tabs />
 			</div>
 		</div>

@@ -8,7 +8,7 @@ const MenuCard = ({
 	const { imgSrc, name, description } = menu;
 	return (
 		<div className='flex flex-col items-center justify-center md:flex-row md:py-5'>
-			<div className='border w-[327px] h-[245px] md:w-[128px] md:h-[96px] flex justify-center items-center relative'>
+			<div className='w-[327px] h-[245px] md:w-[128px] md:h-[96px] flex justify-center items-center relative'>
 				<Image
 					src={imgSrc}
 					// width={327}

@@ -18,10 +18,10 @@ const BookingForm = () => {
 
 	return (
 		<div className='z-10 flex items-center justify-center mb-24 -mt-24'>
-			<div className=' shadow-3xl bg-white text-[#8E8E8E] bg-green-300 md:w-[540px] flex flex-col justify-center items-center'>
+			<div className='shadow-3xl bg-white text-[#8E8E8E] md:w-[540px] flex flex-col justify-center items-center'>
 				<form
 					onSubmit={handleSubmit(onSubmit)}
-					className='flex flex-col my-5 space-y-5 bg-gray-600'
+					className='flex flex-col my-5 space-y-5'
 				>
 					<input
 						type='text'
@@ -42,9 +42,9 @@ const BookingForm = () => {
 						{errors.name && 'This field is required'}
 					</span>
 
-					<div className='flex flex-col justify-center items-start w-[327px] border px-6'>
+					<div className='flex flex-col justify-center items-start w-[327px] px-6'>
 						<span className='h-[45px] leading-[45px]'>Pick a date</span>
-						<div className='flex justify-between w-full bg-pink-400'>
+						<div className='flex justify-between w-full'>
 							<input
 								type='text'
 								placeholder='MM'
